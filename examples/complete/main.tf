@@ -4,6 +4,6 @@ module "ethernet_adapter_policy" {
 
   adapter_template = "VMware"
   description      = "default Ethernet Adapter Policy."
-  name         = "default"
-  organization = "default"
+  name             = "default"
+  organization     = "default"
 }
