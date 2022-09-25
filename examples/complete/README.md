@@ -17,10 +17,23 @@ module "ethernet_adapter_policy" {
   source  = "terraform-cisco-modules/policies-ethernet-adapter/intersight"
   version = ">= 1.0.1"
 
-  adapter_template = "VMware"
+  adapter_template = "WIN-AzureStack"
   description      = "default Ethernet Adapter Policy."
   name             = "default"
   organization     = "default"
+}
+```
+
+### provider.tf
+```hcl
+terraform {
+  required_providers {
+    intersight = {
+      source  = "CiscoDevNet/intersight"
+      version = ">=1.0.32"
+    }
+  }
+  required_version = ">=1.3.0"
 }
 ```
 
@@ -42,24 +55,6 @@ variable "secretkey" {
   description = "Intersight Secret Key."
   sensitive   = true
   type        = string
-}
-```
-
-### versions.tf
-```hcl
-terraform {
-  required_providers {
-    intersight = {
-      source  = "CiscoDevNet/intersight"
-      version = ">=1.0.32"
-    }
-  }
-}
-
-provider "intersight" {
-  apikey    = var.apikey
-  endpoint  = var.endpoint
-  secretkey = var.secretkey
 }
 ```
 <!-- END_TF_DOCS -->
