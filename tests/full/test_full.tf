@@ -29,7 +29,6 @@ output "moid" {
 module "main" {
   source           = "../.."
   adapter_template = "VMware"
-  description      = "${var.name} Ethernet Adapter Policy."
   name             = var.name
   organization     = "default"
 }

@@ -50,9 +50,9 @@ func TestFull(t *testing.T) {
 	expectedJSONTemplate := `
 {
 	"Name":        "{{ .name }}",
-	"Description": "{{ .name }} Ethernet Adapter Policy.",
 
 	"AdvancedFilter": false,
+	"Ancestors": [],
 	"ArfsSettings": {
 	  "ClassId": "vnic.ArfsSettings",
 	  "Enabled": false,
@@ -60,10 +60,11 @@ func TestFull(t *testing.T) {
 	},
 	"CompletionQueueSettings": {
 	  "ClassId": "vnic.CompletionQueueSettings",
-	  "Count": 5,
+	  "Count": 2,
 	  "ObjectType": "vnic.CompletionQueueSettings",
 	  "RingSize": 1
 	},
+	"Description": "Recommended adapter settings for VMware.",
 	"DomainGroupMoid": "5b2541887a7662743465ce9c",
 	"GeneveEnabled": false,
 	"InterruptScaling": false,
@@ -71,10 +72,11 @@ func TestFull(t *testing.T) {
 	  "ClassId": "vnic.EthInterruptSettings",
 	  "CoalescingTime": 125,
 	  "CoalescingType": "MIN",
-	  "Count": 8,
+	  "Count": 4,
 	  "Mode": "MSIx",
 	  "ObjectType": "vnic.EthInterruptSettings"
 	},
+	"Name": "default",
 	"NvgreSettings": {
 	  "ClassId": "vnic.NvgreSettings",
 	  "Enabled": false,
@@ -97,20 +99,20 @@ func TestFull(t *testing.T) {
 	},
 	"RssHashSettings": {
 	  "ClassId": "vnic.RssHashSettings",
-	  "Ipv4Hash": true,
+	  "Ipv4Hash": false,
 	  "Ipv6ExtHash": false,
-	  "Ipv6Hash": true,
+	  "Ipv6Hash": false,
 	  "ObjectType": "vnic.RssHashSettings",
-	  "TcpIpv4Hash": true,
+	  "TcpIpv4Hash": false,
 	  "TcpIpv6ExtHash": false,
-	  "TcpIpv6Hash": true,
+	  "TcpIpv6Hash": false,
 	  "UdpIpv4Hash": false,
 	  "UdpIpv6Hash": false
 	},
-	"RssSettings": true,
+	"RssSettings": false,
 	"RxQueueSettings": {
 	  "ClassId": "vnic.EthRxQueueSettings",
-	  "Count": 4,
+	  "Count": 1,
 	  "ObjectType": "vnic.EthRxQueueSettings",
 	  "RingSize": 512
 	},
