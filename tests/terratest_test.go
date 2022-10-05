@@ -52,7 +52,6 @@ func TestFull(t *testing.T) {
 	"Name":        "{{ .name }}",
 
 	"AdvancedFilter": false,
-	"Ancestors": [],
 	"ArfsSettings": {
 	  "ClassId": "vnic.ArfsSettings",
 	  "Enabled": false,
@@ -65,7 +64,6 @@ func TestFull(t *testing.T) {
 	  "RingSize": 1
 	},
 	"Description": "Recommended adapter settings for VMware.",
-	"DomainGroupMoid": "5b2541887a7662743465ce9c",
 	"GeneveEnabled": false,
 	"InterruptScaling": false,
 	"InterruptSettings": {
@@ -76,7 +74,6 @@ func TestFull(t *testing.T) {
 	  "Mode": "MSIx",
 	  "ObjectType": "vnic.EthInterruptSettings"
 	},
-	"Name": "default",
 	"NvgreSettings": {
 	  "ClassId": "vnic.NvgreSettings",
 	  "Enabled": false,
