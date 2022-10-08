@@ -103,9 +103,6 @@ export TF_VAR_secretkeyfile="<secret-key-file-location>"
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_apikey"></a> [apikey](#input\_apikey) | Intersight API Key. | `string` | n/a | yes |
-| <a name="input_endpoint"></a> [endpoint](#input\_endpoint) | Intersight URL. | `string` | `"https://intersight.com"` | no |
-| <a name="input_secretkey"></a> [secretkey](#input\_secretkey) | Intersight Secret Key. | `string` | n/a | yes |
 | <a name="input_adapter_template"></a> [adapter\_template](#input\_adapter\_template) | Name of a Pre-Configured Adapter Policy.  Options are:<br>* Linux<br>* Linux-NVMe-RoCE<br>* MQ<br>* MQ-SMBd<br>* SMBServer<br>* SMBClient<br>* Solaris<br>* SRIOV<br>* usNIC<br>* usNICOracleRAC<br>* VMware<br>* VMwarePassThru<br>* WIN-AzureStack<br>* Win-HPN<br>* Win-HPN-SMBd<br>* Windows | `string` | `""` | no |
 | <a name="input_completion_queue_count"></a> [completion\_queue\_count](#input\_completion\_queue\_count) | The number of completion queue resources to allocate. In general, the number of completion queue resources to allocate is equal to the number of transmit queue resources plus the number of receive queue resources.  Range is 1-2000. | `number` | `5` | no |
 | <a name="input_completion_ring_size"></a> [completion\_ring\_size](#input\_completion\_ring\_size) | The number of descriptors in each completion queue.  Range is 1-256. | `number` | `1` | no |
